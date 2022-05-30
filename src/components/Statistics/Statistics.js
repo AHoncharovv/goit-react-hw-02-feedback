@@ -1,10 +1,11 @@
-import React from "react";
+import PropTypes from 'prop-types';
+import style from './Statistics.module.css'
 
 function Statistics({ good, neutral, bad, total, positive = 0 }) {
     return (
         <>
             <h2>Statistics</h2>
-            <ul>
+            <ul className={style.list}>
                 <li>Good: {good}</li>
                 <li>Neutral: {neutral}</li>
                 <li>Bad: {bad}</li>
@@ -16,3 +17,11 @@ function Statistics({ good, neutral, bad, total, positive = 0 }) {
 } 
 
 export default Statistics;
+
+Statistics.propTypes = {
+    good: PropTypes.number.isRequired,
+    neutral: PropTypes.number.isRequired,
+    bad: PropTypes.number.isRequired,
+    total: PropTypes.number,
+    positive: PropTypes.number
+};

@@ -1,0 +1,13 @@
+.list {
+    list-style: none;
+    padding: 25px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+.button {
+    font-size: 30px;
+}
+.item {
+    margin: 15px;
+}
