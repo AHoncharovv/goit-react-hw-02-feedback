@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import style from './Statistics.module.css'
 
-function Statistics({ good, neutral, bad, total, positive = 0 }) {
+function Statistics({ good, neutral, bad, total = 0, positive = 0 }) {
     return (
         <>
             <h2>Statistics</h2>
@@ -22,6 +22,6 @@ Statistics.propTypes = {
     good: PropTypes.number.isRequired,
     neutral: PropTypes.number.isRequired,
     bad: PropTypes.number.isRequired,
-    total: PropTypes.number,
-    positive: PropTypes.number
+    total: PropTypes.number.isRequired,
+    positive: PropTypes.number.isRequired,
 };

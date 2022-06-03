@@ -7,7 +7,9 @@ function FeedBackOption({ options, onLeaveFeedback }) {
         <ul className={style.list}>
             {options.map((option, index) => (
                 <li key={index} className={style.item}>
-                    <button type="button" onClick={onLeaveFeedback} value={option} className={style.button}>{option}</button>
+                    <button type="button" onClick={onLeaveFeedback} value={option} className={style.button}>
+                        {option}
+                    </button>
                 </li>
             ))}
         </ul>
